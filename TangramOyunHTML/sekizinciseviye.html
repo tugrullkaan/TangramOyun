@@ -1,0 +1,431 @@
+<html>
+    <head>
+<style>
+     body{
+            font-family: "Times New Roman", Times, serif;
+            background-image: url("http://www.egebombe.com.tr/wp-content/uploads/2015/12/kurumsalpress-arkaplan.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+         
+          #triangle1{
+        
+          
+            position: absolute;
+            left: 1%;
+            top: 66%;
+            width: 0;
+	        height: 0;
+            border-left: 80px solid orange;
+	        border-top: 80px solid transparent;
+            border-bottom: 80px solid transparent;
+          }
+          #paralell{
+            top: 60%;
+        width: 150px;
+        height: 70px;
+        background: orange;
+        transform: skew(-25deg);
+        position: absolute;
+
+          }
+
+          #paralell2{
+            margin-left: 10%;
+            margin-right: 0%;
+            margin-top: 0%;
+            width: 160px;
+	        height: 80px;
+            background: orange;
+            transform: skew(45deg);
+            position: absolute;
+
+          }
+
+          #triangle2{
+            margin-left: 17%;
+            margin-top: 21%;
+         position: absolute;  
+         width: 0;
+	     height: 0;
+	     border-top: 160px solid orange ;
+         border-left: 160px solid transparent;
+      
+          }
+
+          #square{
+           
+            margin-left: 10%;
+            margin-top: 21%;
+           background-color: orange;
+           width: 120px;
+           height: 120px; 
+           position: absolute;
+          
+          }
+
+          #square2{
+            
+            right: 65%;
+            top: 40%;
+            background-color: orange;
+            width: 120px;
+            height: 120px; 
+            position: absolute;
+        
+     
+          }
+
+          #square3{
+          
+            background-color: orange;
+            width: 120px;
+            height: 120px; 
+            position: absolute;
+          }
+
+
+    
+    .canvas {
+     outline-style: solid;
+    outline-color: blue;
+    outline-width: 5px;
+     position:absolute;
+width: 650px;
+height: 600px;
+background: white;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+top: 50px;
+right: 260px;
+  }
+  @keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#dropzone_1{
+  
+    margin-left: 17%;
+     margin-top: 21%;
+    position: absolute;
+    width: 0;
+	height: 0;
+    border-left: 80px solid rgb(194, 161, 99);
+	border-top: 80px solid transparent;
+     border-bottom: 80px solid transparent;
+   
+}
+#dropzone_2{
+
+    width: 160px;
+	height: 80px;
+    margin-left: 23%;
+    margin-top: 21%;
+  background: rgb(194, 161, 99);
+  transform: skew(45deg);
+  position: absolute;
+}
+#dropzone_3{
+    width: 160px;
+	height: 80px;
+    margin-left: 46%;
+    margin-top: 21%;
+  background: rgb(194, 161, 99);
+  transform: skew(45deg);
+  position: absolute;
+   
+}
+#dropzone_4{
+    position: absolute;
+    margin-left: 63%;
+    margin-top: 21%;
+    width: 0;
+	height: 0;
+	border-top: 160px solid rgb(194, 161, 99) ;
+  border-left: 160px solid transparent;
+ 
+}
+#dropzone_5{
+    position: absolute;
+    margin-left: 43%;
+    margin-top: 33%;
+    background-color: rgb(194, 161, 99);
+  width: 120px;
+  height: 120px; 
+  
+  
+}
+#dropzone_6{
+    position: absolute;
+    margin-left: 43%;
+    margin-top: 51%;
+    background-color: rgb(194, 161, 99);
+  width: 120px;
+  height: 120px; 
+    
+}
+
+#dropzone_7{
+    position: absolute;
+    margin-left: 43%;
+    margin-top: 64%;
+    background-color: rgb(194, 161, 99);
+  width: 120px;
+  height: 120px; 
+
+}
+
+
+a {
+  position: relative;
+  display: block;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px 5px 5px 10px;
+  
+  font: 22px Constantia, sans-serif;
+  color: black;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  background: white;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+top: 50px;
+right: 250px;
+  }
+  @keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+a:before,
+a:after {
+  content: '';
+  position: absolute;
+  right: -15px;
+  width: 32px;
+  height: 15px;
+  border-radius: 5px;
+  background: rgb(14, 250, 230);
+}
+a:before {
+  top: 9px;
+  -webkit-transform: rotate(65deg);
+  -ms-transform: rotate(65deg);
+  transform: rotate(65deg);
+}
+a:after {
+  bottom: 9px;
+  -webkit-transform: rotate(-65deg);
+  -ms-transform: rotate(-65deg);
+  transform: rotate(-65deg);
+}
+</style>
+<script>
+    var end=0;
+       var dragged;
+
+/* sürüklenebilir hedefte tetiklenen olaylar */
+document.addEventListener("drag", function( event ) {
+
+}, false);
+
+document.addEventListener("dragstart", function( event ) {
+
+dragged = event.target;
+//yarı saydam yap
+event.target.style.opacity = .5;
+}, false);
+
+document.addEventListener("dragend", function( event ) {
+  // şeffaflığı sıfırla
+}, false);
+
+/* bırakma hedeflerde tetiklenen olaylar */
+document.addEventListener("dragover", function( event ) {
+ //varsayılanın bırakmaya izin vermesini engelle
+event.preventDefault();
+}, false);
+
+document.addEventListener("dragenter", function( event ) {
+
+if ( event.target.className == "canvas" ) {
+}
+
+}, false);
+
+document.addEventListener("dragleave", function( event ) {
+// sürüklenebilir öğe bırakıldığında hedefin arka planını sıfırla
+if ( event.target.className == "canvas" ) {
+event.target.style.background = "";
+}
+
+}, false);
+
+document.addEventListener("drop", function( event ) {
+
+
+event.preventDefault();
+// sürüklenen elemanı seçilen bırakma hedefine taşı
+if ( event.target.className == "dropzone_1" ) {
+if(dragged.className=="triangle1"){
+end=end+1;
+if(end==7){
+var el = document.getElementById("a");
+el.style.visibility="visible";
+
+}
+var el = document.getElementById("dropzone_1");
+  el.style.borderLeftColor="orange";
+
+dragged.parentNode.removeChild( dragged );
+event.target.setData(dragged);
+event.target.dataTransfer(dragged);
+}
+}
+if ( event.target.className == "dropzone_2" ) {
+if(dragged.className=="paralell"){
+end=end+1;
+if(end==7){
+var el = document.getElementById("a");
+el.style.visibility="visible";
+
+}
+var el = document.getElementById("dropzone_2");
+  el.style.backgroundColor= "orange";
+dragged.parentNode.removeChild(dragged);
+event.target.setData(dragged);
+event.target.dataTransfer(dragged);
+}
+}
+if ( event.target.className == "dropzone_3" ) {
+if(dragged.className=="paralell2"){
+end=end+1;
+if(end==7){
+var el = document.getElementById("a");
+el.style.visibility="visible";
+
+}
+var el = document.getElementById("dropzone_3");
+  el.style.backgroundColor= "orange";
+dragged.parentNode.removeChild(dragged);
+event.target.setData(dragged);
+event.target.dataTransfer(dragged);
+}
+
+}
+if ( event.target.className == "dropzone_4" ) {
+if(dragged.className=="triangle2"){
+end=end+1;
+if(end==7){
+var el = document.getElementById("a");
+el.style.visibility="visible";
+
+}
+var el = document.getElementById("dropzone_4");
+  el.style.borderTopColor= "orange";
+dragged.parentNode.removeChild(dragged);
+event.target.setData(dragged);
+event.target.dataTransfer(dragged);
+}
+}
+
+if ( event.target.className == "dropzone_5" ) {
+if(dragged.className=="square"){
+end=end+1;
+if(end==7){
+var el = document.getElementById("a");
+el.style.visibility="visible";
+
+}
+var el = document.getElementById("dropzone_5");
+  el.style.backgroundColor= "orange";
+dragged.parentNode.removeChild(dragged);
+event.target.setData(dragged);
+event.target.dataTransfer(dragged);
+}
+
+}
+if ( event.target.className == "dropzone_6" ) {
+if(dragged.className=="square2"){
+end=end+1;
+if(end==7){
+var el = document.getElementById("a");
+el.style.visibility="visible";
+
+}
+var el = document.getElementById("dropzone_6");
+  el.style.backgroundColor= "orange";
+dragged.parentNode.removeChild(dragged);
+event.target.setData(dragged);
+event.target.dataTransfer(dragged);
+}
+
+}
+if ( event.target.className == "dropzone_7" ) {
+if(dragged.className=="square3"){
+end=end+1;
+if(end==7){
+var el = document.getElementById("a");
+el.style.visibility="visible";
+
+}
+var el = document.getElementById("dropzone_7");
+  el.style.backgroundColor= "orange";
+dragged.parentNode.removeChild(dragged);
+event.target.setData(dragged);
+event.target.dataTransfer(dragged);
+}
+
+
+}
+}, false);
+</script>
+    </head>
+    <body>
+        <a id="a" style="visibility: hidden; position: absolute; right: 5%; top: 45%;" href="dokuzuncuseviye.html">Dokuzuncu Seviye</a>
+        <div  style=" margin-top: 50px; width: 600px; height:600px; outline-style: solid;
+        outline-color: black;
+        outline-width: 5px;">
+        <div class="triangle1" id="triangle1" draggable="true" ondragstart="event.dataTransfer.setData('text/plain,null')"></div>
+        <div class="paralell" id="paralell" draggable="true" ondragstart="event.dataTransfer.setData('text/plain,null')"></div>
+        <div class="paralell2" id="paralell2" draggable="true" ondragstart="event.dataTransfer.setData('text/plain,null')"></div>
+        <div class="triangle2" id="triangle2" draggable="true" ondragstart="event.dataTransfer.setData('text/plain,null')"></div>
+        <div class="square" id="square" draggable="true" ondragstart="event.dataTransfer.setData('text/plain,null')"></div>
+        <div class="square2" id="square2" draggable="true" ondragstart="event.dataTransfer.setData('text/plain,null')"></div>
+        <div class="square3" id="square3" draggable="true" ondragstart="event.dataTransfer.setData('text/plain,null')" ></div>
+        
+
+     
+        
+        </div>
+
+        <div class="canvas">
+        <div class="dropzone_1" id="dropzone_1"></div>
+        <div class="dropzone_2" id="dropzone_2"></div>
+        <div class="dropzone_3" id="dropzone_3"></div>
+        <div class="dropzone_4" id="dropzone_4"></div>
+        <div class="dropzone_5" id="dropzone_5" ></div>
+        <div class="dropzone_6" id="dropzone_6" ></div>
+        <div class="dropzone_7" id="dropzone_7" ></div>
+
+    </div>
+        
+    </body>
+</html>

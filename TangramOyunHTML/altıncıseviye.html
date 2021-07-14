@@ -1,0 +1,460 @@
+<html>
+    <head>
+        <style>
+             body{
+                font-family: "Times New Roman", Times, serif;
+            background-image: url("http://www.egebombe.com.tr/wp-content/uploads/2015/12/kurumsalpress-arkaplan.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+
+          #sagkulak{
+            margin-left: 5%;
+            margin-top: 12%;
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 80px solid black;
+            border-top: 80px solid transparent;
+            border-bottom: 80px solid transparent;
+          }
+
+          #solkulak{
+                  margin-left: 25%;
+          margin-top: 1%;
+          position: absolute;
+          width: 0;
+        height: 0;
+        border-right: 80px solid black;
+        border-top: 80px solid transparent;
+        border-bottom: 80px solid transparent;
+          }
+
+          #yüz{
+              width: 0;
+              height: 0;
+              border: 80px solid transparent;
+              border-bottom-color: black;
+              position: relative;
+              top: -80px;
+            }
+            #yüz:after {
+              content: '';
+              position: absolute;
+              left: -80px;
+              top: 80px;
+              width: 0;
+              height: 0;
+              border: 80px solid transparent;
+              border-top-color: black;
+          }
+
+          #gövde1{
+                  position: absolute;
+          width:0;
+        height:0;
+        margin-left: 22%;
+          margin-top: 20%;
+        border-bottom:100px solid black;
+        border-left: 100px solid transparent; 
+        border-right: 100px solid transparent;
+          }
+
+          #gövde2{
+                    width: 0;
+          height: 0;
+            margin-left: 32%;
+            margin-top: 8%;
+          border-top: 200px solid black;
+          border-right: 200px solid transparent;
+          }
+
+          #gövde3{
+                  width: 0;
+        height: 0;
+          margin-left: 32%;
+          margin-top: -29%;
+        border-bottom: 200px solid black;
+        border-left: 200px solid transparent;
+          }
+
+          #kuyruk{
+                  width: 150px;
+        height: 70px;
+          margin-left: 28%;
+          margin-top: -11%;
+        background: black;
+        transform: skew(-25deg);
+        position: absolute;
+          }
+
+          
+            .canvas {
+        outline-style: solid;
+    outline-color: blue;
+    outline-width: 5px;
+      position:absolute;
+width: 650px;
+height: 600px;
+background: white;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+top: 50px;
+right: 260px;
+  }
+  @keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#dropzone_1{
+
+  position: absolute;
+    margin-left: 23%;
+    margin-top: 1%;
+    width: 0;
+	height: 0;
+	border-left: 80px solid blue;
+	border-top: 80px solid transparent;
+  border-bottom: 80px solid transparent;
+}
+
+#dropzone_2{
+  position: absolute;
+  margin-left: 35%;
+    margin-top: 1%;
+    position: absolute;
+    width: 0;
+	height: 0;
+	border-right: 80px solid blue;
+	border-top: 80px solid transparent;
+  border-bottom: 80px solid transparent;
+}
+
+#dropzone_3{
+  width: 0;
+      height: 0;
+      margin-left: 23%;
+    margin-top: 15%;
+      border: 80px solid transparent;
+      border-bottom-color: blue;
+      position: relative;
+      top: -80px;
+    }
+    #dropzone_8 {
+      margin-left: 35%;
+    margin-top:15%;
+      content: '';
+      position: absolute;
+      left: -80px;
+      top: 80px;
+      width: 0;
+      height: 0;
+      border: 80px solid transparent;
+      border-top-color: blue;
+}
+
+#dropzone_4{
+  position: absolute;
+    width:0;
+  height:0;
+  margin-left: 32%;
+    margin-top: -10%;
+  border-bottom:100px solid blue;
+  border-left: 100px solid transparent; 
+  border-right: 100px solid transparent;
+}
+
+#dropzone_5{
+  position: absolute ;
+ 
+    margin-left: 32%;
+    margin-top: 8%;
+	border-top: 200px solid blue;
+  border-right: 200px solid transparent;
+}
+
+#dropzone_6{
+  position: absolute ;
+  width: 0;
+	height: 0;
+    margin-left: 32%;
+    margin-top: 10%;
+	border-bottom: 200px solid blue;
+  border-left: 200px solid transparent;
+}
+
+#dropzone_7{
+  position: absolute ;
+  width: 150px;
+	height: 70px;
+    margin-left: 68%;
+    margin-top: 28%;
+  background: blue;
+  transform: skew(-25deg);
+  position: absolute;
+}
+
+
+       
+ a {
+  position: relative;
+  display: block;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px 5px 5px 10px;
+  
+  font: 22px Constantia, sans-serif;
+  color: black;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  background: white;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+top: 50px;
+right: 250px;
+  }
+  @keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+a:before,
+a:after {
+  content: '';
+  position: absolute;
+  right: -15px;
+  width: 32px;
+  height: 15px;
+  border-radius: 5px;
+  background: rgb(14, 250, 230);
+}
+a:before {
+  top: 9px;
+  -webkit-transform: rotate(65deg);
+  -ms-transform: rotate(65deg);
+  transform: rotate(65deg);
+}
+a:after {
+  bottom: 9px;
+  -webkit-transform: rotate(-65deg);
+  -ms-transform: rotate(-65deg);
+  transform: rotate(-65deg);
+}
+</style>
+
+
+<script>
+    var end=0;
+       var dragged;
+
+/* sürüklenebilir hedefte tetiklenen olaylar */
+document.addEventListener("drag", function( event ) {
+
+}, false);
+
+document.addEventListener("dragstart", function( event ) {
+
+dragged = event.target;
+//yarı saydam yap
+event.target.style.opacity = .5;
+}, false);
+
+document.addEventListener("dragend", function( event ) {
+ // şeffaflığı sıfırla
+event.target.style.opacity = "";
+}, false);
+
+/* bırakma hedeflerde tetiklenen olaylar */
+document.addEventListener("dragover", function( event ) {
+//varsayılanın bırakmaya izin vermesini engelle
+event.preventDefault();
+}, false);
+
+document.addEventListener("dragenter", function( event ) {
+
+if ( event.target.className == "canvas" ) {
+}
+
+}, false);
+
+document.addEventListener("dragleave", function( event ) {
+// sürüklenebilir öğe bırakıldığında hedefin arka planını sıfırla
+if ( event.target.className == "canvas" ) {
+event.target.style.background = "";
+}
+
+}, false);
+
+document.addEventListener("drop", function( event ) {
+
+
+event.preventDefault();
+  // sürüklenen elemanı seçilen bırakma hedefine taşı
+if ( event.target.className == "dropzone_1" || event.target.className=="dropzone_3") {
+if(dragged.className=="sagkulak"){
+end=end+1;
+if(end==7){
+var el = document.getElementById("a");
+el.style.visibility="visible";
+
+}
+var el = document.getElementById("dropzone_1");
+  el.style.borderLeftColor="black";
+event.target.style.background = "";
+dragged.parentNode.removeChild( dragged );
+event.target.setData(dragged);
+event.target.dataTransfer(dragged);
+}
+}
+if ( event.target.className == "dropzone_2"|| event.target.className=="dropzone_3" ) {
+if(dragged.className=="solkulak"){
+end=end+1;
+if(end==7){
+var el = document.getElementById("a");
+el.style.visibility="visible";
+
+}
+var el = document.getElementById("dropzone_2");
+  el.style.borderRightColor= "black";
+dragged.parentNode.removeChild(dragged);
+event.target.setData(dragged);
+event.target.dataTransfer(dragged);
+}
+}
+if ( event.target.className == "dropzone_3"|| event.target.className=="dropzone_8" ) {
+if(dragged.className=="yüz"){
+end=end+1;
+if(end==7){
+var el = document.getElementById("a");
+el.style.visibility="visible";
+
+}
+var el = document.getElementById("dropzone_3");
+el.style.borderBottomColor="black";
+var element = document.getElementById("dropzone_8");
+element.style.borderTopColor="black";
+dragged.parentNode.removeChild(dragged);
+event.target.setData(dragged);
+event.target.dataTransfer(dragged);
+}
+
+}
+if ( event.target.className == "dropzone_4" ) {
+if(dragged.className=="gövde1"){
+end=end+1;
+if(end==7){
+var el = document.getElementById("a");
+el.style.visibility="visible";
+
+}
+var el = document.getElementById("dropzone_4");
+  el.style.borderBottomColor= "black";
+dragged.parentNode.removeChild(dragged);
+event.target.setData(dragged);
+event.target.dataTransfer(dragged);
+}
+}
+
+if ( event.target.className == "dropzone_5" || event.target.className=="dropzone_6") {
+if(dragged.className=="gövde2"){
+end=end+1;
+if(end==7){
+var el = document.getElementById("a");
+el.style.visibility="visible";
+
+}
+var el = document.getElementById("dropzone_5");
+  el.style.borderTopColor= "black";
+dragged.parentNode.removeChild(dragged);
+event.target.setData(dragged);
+event.target.dataTransfer(dragged);
+}
+
+}
+if ( event.target.className == "dropzone_6" ) {
+if(dragged.className=="gövde3"){
+end=end+1;
+if(end==7){
+var el = document.getElementById("a");
+el.style.visibility="visible";
+
+}
+var el = document.getElementById("dropzone_6");
+  el.style.borderBottomColor= "black";
+dragged.parentNode.removeChild(dragged);
+event.target.setData(dragged);
+event.target.dataTransfer(dragged);
+}
+
+}
+
+if ( event.target.className == "dropzone_7" ) {
+if(dragged.className=="kuyruk"){
+end=end+1;
+if(end==7){
+var el = document.getElementById("a");
+el.style.visibility="visible";
+
+}
+var el = document.getElementById("dropzone_7");
+  el.style.backgroundColor= "black";
+dragged.parentNode.removeChild(dragged);
+event.target.setData(dragged);
+event.target.dataTransfer(dragged);
+}
+
+}
+}, false);
+
+        </script>
+    </head>
+    <body>
+        <a id="a" style="visibility: hidden; position: absolute; right: 5%; top: 45%;" href="yedinciseviye.html">Yedinci Seviye</a>
+        <div  style=" margin-top: 50px; width: 600px; height:600px; outline-style: solid;
+        outline-color: black;
+        outline-width: 5px;">
+
+        <div class="sagkulak" id="sagkulak"  draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)" ></div>
+        <div class="solkulak" id="solkulak"  draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"></div>
+        <div class="yüz" id="yüz"            draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"></div>
+        <div class="gövde1" id="gövde1"     draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"></div>
+        <div class="gövde2" id="gövde2"     draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"></div>
+        <div class="gövde3" id="gövde3"     draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"></div>
+        <div class="kuyruk" id="kuyruk"     draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"></div>
+       
+
+
+
+    </div>
+
+        <div class="canvas">
+            <div class="dropzone_1" id="dropzone_1"></div>
+            <div class="dropzone_2" id="dropzone_2"></div>
+            <div class="dropzone_3" id="dropzone_3"></div>
+            <div  class="dropzone_4" id="dropzone_4"></div>
+            <div class=container id="container">
+            <div  class="dropzone_5" id="dropzone_5"></div>
+            <div  class="dropzone_6" id="dropzone_6"></div>
+          </div>
+            <div class="dropzone_7" id="dropzone_7"></div>
+            <div class="dropzone_8" id="dropzone_8" ></div>
+                    </div>
+    </body>
+</html>
